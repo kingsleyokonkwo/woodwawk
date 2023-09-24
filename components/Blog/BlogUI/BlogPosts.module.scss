@@ -1,0 +1,47 @@
+@import "../../../styles/variables.scss";
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+
+    .blogpost {
+    &__image {
+      position: relative;
+      height: 28rem;
+      width: 36rem;
+      margin-bottom: 2.4rem;
+      .background {
+        height: 30rem;
+        width: 33.8rem;
+        background-color: $soft-bg;
+        margin-left: 4.5rem;
+      }
+
+      .blogpost__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0.9rem;
+        right: 0;
+      }
+    }
+
+    &__time {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+    }
+
+    &__header {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    &__desc {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../styles/variables.scss";
+
+.categories {
+  width: 100%;
+  background-color: $soft-bg;
+  padding: 1.6rem;
+  margin-bottom: 8.6rem;
+
+  p {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+  }
+
+  .listItems {
+    .listItem {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 1.6rem;
+      color: #4f4f4f;
+      border-bottom: 1px solid #E58411;
+      width: fit-content;
+    }
+  }
+}

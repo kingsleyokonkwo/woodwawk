@@ -1,0 +1,125 @@
+@import "../../styles/variables.scss";
+
+.footerContainer {
+  width: 100%;
+  background-color: $soft-bg;
+
+  .footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 6.4rem 12rem;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.4rem;
+      gap: 2rem;
+
+      .brand {
+        flex: 1;
+
+        &__logo {
+          width: 28.1rem;
+          margin-bottom: 2rem;
+        }
+
+        &__text {
+          font-size: 1.6rem;
+          font-weight: 400;
+          max-width: 32rem;
+        }
+      }
+
+      .links {
+        flex: 1;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 12rem 12rem;
+        gap: 2.4rem;
+        padding-left: 9rem;
+
+        li {
+            width: fit-content;
+            hr {
+              margin-top: .5rem;
+              height: 2px;
+              border: none;
+              outline: none;
+              border-radius: 1rem;
+              background-color: $dark-bg;
+
+            }
+          }
+      }
+
+      .advert {
+        flex: 1;
+
+        &__header {
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+
+        &__text {
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin-bottom: 1.6rem;
+          max-width: 32rem;
+        }
+
+        .footer__form {
+          width: 35rem;
+          padding: 0.8rem 0.8rem 0.8rem 2.4rem;
+          background-color: $main-bg;
+          display: flex;
+          align-items: center;
+          border-radius: 10rem;
+          input {
+            width: 19.9rem;
+            background-color: $main-bg;
+            outline: none;
+            border: none;
+            font-size: 1.4rem;
+            color: #5d6588;
+            margin-right: 1rem;
+
+            &::placeholder {
+              font-size: 1.4rem;
+              color: #5d6588;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    .line {
+      height: 1px;
+      outline: none;
+      background-color: $dark-bg;
+      border: none;
+    }
+
+    &__bottom {
+      margin-top: 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .socials {
+        display: flex;
+        gap: 6.4rem;
+
+        .social {
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}

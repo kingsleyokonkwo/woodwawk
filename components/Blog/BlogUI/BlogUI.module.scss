@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+
+.blogContainer {
+    width: 100%;
+    background-color: $main-bg;
+
+    .blogUI {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 8.9rem 11.4rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2.4rem;
+    }
+}

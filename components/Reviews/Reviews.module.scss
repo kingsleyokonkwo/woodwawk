@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+
+.reviewContainer {
+  width: 100%;
+  background-color: $main-bg;
+
+  .review__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    padding: 0 16rem;
+
+    .review__header {
+      font-weight: 500;
+      font-size: 4.8rem;
+      margin-bottom: 4.8rem;
+      color: #333333;
+      text-align: center;
+    }
+
+    .reviews {
+      position: relative;
+      display: flex;
+      gap: 2.4rem;
+
+      .review {
+        border: 2px solid $soft-bg;
+        padding: 2.4rem;
+        text-align: center;
+
+        .header {
+          margin-bottom: 0.8rem;
+          font-size: 2.4rem;
+          font-weight: 500;
+        }
+
+        .text {
+          margin-bottom: 0.8rem;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+
+        .stars {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+
+          .star {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+      }
+
+      .arrowLeft,
+      .arrowright {
+        position: absolute;
+        height: 3.2rem;
+        width: 3.2rem;
+
+        top: 40%;
+        cursor: pointer;
+      }
+
+      .arrowLeft {
+        left: -4.4rem;
+      }
+
+      .arrowright {
+        right: -4.4rem;
+      }
+    }
+  }
+}

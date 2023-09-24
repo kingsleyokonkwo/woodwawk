@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.quotes {
+  width: 75%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: $dark-bg;
+  border-radius: 3.2rem;
+  padding: 6.4rem 15rem;
+  text-align: center;
+  margin-bottom: 9.4rem ;
+  position: relative;
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    color: $light-text;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    color: $light-text;
+    line-height: 1.7;
+  }
+
+  .design {
+    position: absolute;
+    width: 10rem;
+    height: 40rem;
+    right: 0;
+    top: 0rem;
+  }
+
+  .design1 {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    top: 15.4rem;
+    left: 0;
+    border-radius: 0rem 0rem 0rem 3.2rem;
+  }
+}
