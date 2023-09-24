@@ -1,6 +1,7 @@
 import Details from "../Details/Details";
 import styles from "./Product.module.scss";
 import Image from "next/image";
+import { products } from "@/Data";
 
 const Product = () => {
   return (
@@ -9,46 +10,18 @@ const Product = () => {
         <Details />
         <h1>Product Range</h1>
         <div className={styles.products}>
-          <div className={styles.product}>
+          {products.map(product => (
+            <div className={styles.product} key={product.id}>
             <Image
-              src="/assets/chair.png"
+              src={product.image}
               alt="product"
-              height={10000}
-              width={10000}
+              height={100}
+              width={100}
               className={styles.image}
             />
-            <p>Lorem ipsum dolor sit amet</p>
+            <p>{product.desc}</p>
           </div>
-          <div className={styles.product}>
-            <Image
-              src="/assets/bookshelf.png"
-              alt="product"
-              height={10000}
-              width={10000}
-              className={styles.image}
-            />
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-          <div className={styles.product}>
-            <Image
-              src="/assets/workspace.png"
-              alt="product"
-              height={10000}
-              width={10000}
-              className={styles.image}
-            />
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-          <div className={styles.product}>
-            <Image
-              src="/assets/workspace.png"
-              alt="product"
-              height={10000}
-              width={10000}
-              className={styles.image}
-            />
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
+          ))}
         </div>
       </div>
     </div>

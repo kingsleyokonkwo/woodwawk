@@ -1,3 +1,26 @@
+export const products = [
+  {
+    id: 1,
+    image: "/assets/chair.png",
+    desc: "Lorem ipsum dolor sit amet"
+  },
+  {
+    id: 2,
+    image: "/assets/bookshelf.png",
+    desc: "Lorem ipsum dolor sit amet"
+  },
+  {
+    id: 3,
+    image: "/assets/workspace.png",
+    desc: "Lorem ipsum dolor sit amet"
+  },
+  {
+    id: 4,
+    image: "/assets/workspace.png",
+    desc: "Lorem ipsum dolor sit amet"
+  },
+]
+
 export const reviews = [
   {
     id: 1,

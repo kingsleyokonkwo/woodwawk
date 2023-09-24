@@ -1,0 +1,40 @@
+.pagination {
+  width: fit-content;
+  margin: 6.9rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  .arrowContainer,
+  .pages {
+    height: 2.8rem;
+    width: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #E58411;
+    }
+  }
+
+  .arrowContainer {
+    .controlArrow {
+      height: 90%;
+      width: 90%;
+      color: #1c1c1c;
+      
+    }
+  }
+
+  .pages {
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      color: #1c1c1c;
+    }
+  }
+}
