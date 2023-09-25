@@ -1,7 +1,11 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
 .header {
   width: 100%;
   background-color: $main-bg;
+  position: fixed;
+  z-index: 1000;
 
   .nav {
     max-width: 1440px;
@@ -11,20 +15,76 @@
     justify-content: space-between;
     padding: 0.2rem 11.4rem 0.2rem 9rem;
 
+    @include md {
+      padding: .2rem 6.5rem .2rem 4rem;
+    }
+
+    .hamburger {
+      display: none;
+      position: relative;
+      z-index: 1000;
+      @include md {
+        display: initial;
+      }
+
+      .cancel {
+        height: 4rem;
+        width: 4rem;
+        position: absolute;
+        top: -18px;
+        right: -7px;
+      }
+
+      .menu {
+        height: 3.2rem;
+        width: 3.2rem;
+        position: absolute;
+        top: -15px;
+        right: -5px;
+      }
+    }
+
     .logoContainer {
       .logo {
         width: 28.1rem;
         height: 10rem;
         object-fit: cover;
+
+        @include md {
+          width: 16.5rem;
+          height: 6.4rem;
+        }
       }
     }
 
     .navigations {
       display: flex;
       gap: 3.2rem;
+
+      @include md {
+        flex-direction: column;
+        background-color: $soft-bg;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        transition: 0.3s;
+        padding: 6.4rem 0rem;
+
+      }
+
+      &.active {
+        @include md {
+          left: 0;
+        }
+      }
+
       li {
         hr {
-          margin-top: .5rem;
+          margin-top: 0.5rem;
           height: 2px;
           border: none;
           outline: none;

@@ -28,6 +28,20 @@ const Quotes = () => {
         height={10000}
         className={styles.design1}
       />
+      <Image
+        src="/assets/design-3.png"
+        alt="design"
+        width={10000}
+        height={10000}
+        className={styles.design2}
+      />
+      <Image
+        src="/assets/design-4.png"
+        alt="design"
+        width={10000}
+        height={10000}
+        className={styles.design3}
+      />
     </div>
   );
 };

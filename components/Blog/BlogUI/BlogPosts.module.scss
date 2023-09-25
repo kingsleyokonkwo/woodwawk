@@ -1,9 +1,14 @@
 @import "../../../styles/variables.scss";
+@import '../../../styles/responsive.scss';
 
 .blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
+
+    @include md {
+      padding: 2rem;
+    }
 
     .blogpost {
     &__image {
@@ -11,11 +16,20 @@
       height: 28rem;
       width: 36rem;
       margin-bottom: 2.4rem;
+
+      @include xxl {
+        width: 33rem;
+      }
+      
       .background {
         height: 30rem;
         width: 33.8rem;
         background-color: $soft-bg;
         margin-left: 4.5rem;
+
+        @include xxl {
+          width: 30rem;
+        }
       }
 
       .blogpost__img {

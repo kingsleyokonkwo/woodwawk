@@ -1,43 +1,67 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .details {
-    width: 83%;
-    margin: 0 auto;
-    background-color: $dark-bg;
+  width: 83%;
+  margin: 0 auto;
+  background-color: $dark-bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  position: absolute;
+  bottom: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1195.2px;
+
+  @include md {
+    bottom: 87.5%;
+    left: 50%;
+    padding: 0;
+  }
+
+  .vl {
+    height: 8rem;
+    width: 0.2rem;
+    background-color: $soft-bg;
+  }
+
+  // #line {
+  //     @include md {
+  //         display: none;
+  //     }
+  // }
+
+  .detail {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 2.4rem;
-    position: absolute;
-    bottom: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1195.2px;
 
-    .vl {
-        height: 8rem;
-        width: .2rem;
-        background-color: $soft-bg;
-
+    @include md {
+      padding: 1.4rem;
     }
 
-    .detail {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2.4rem;
+    .top {
+      color: $light-text;
+      font-size: 4.8rem;
+      font-weight: 500;
 
-        .top {
-            color: $light-text;
-            font-size: 4.8rem;
-            font-weight: 500;
-        }
-
-        p{
-            color: $light-text;
-            font-size: 2.2rem;
-            font-weight: 400;
-            line-height: 1.25;
-        }
+      @include md {
+        font-size: 4rem;
+      }
     }
+
+    p {
+      color: $light-text;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.25;
+
+      @include md {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

@@ -13,7 +13,7 @@ const Details = () => {
         <p>Branches Nation </p>
         <p>wide</p>
       </div>
-      <div className={styles.vl}></div>
+      <div className={styles.vl} id={styles.line}></div>
       <div className={styles.detail}>
         <p className={styles.top}>10k+</p>
         <p>Products Sold</p>

@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import '../../styles/responsive.scss';
 
 .reviewContainer {
   width: 100%;
@@ -9,6 +10,10 @@
     margin: 0 auto;
     margin-bottom: 10rem;
     padding: 0 16rem;
+
+    @include md {
+      padding: 0 9rem;
+    }
 
     .review__header {
       font-weight: 500;

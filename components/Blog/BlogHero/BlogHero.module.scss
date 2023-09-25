@@ -3,43 +3,50 @@
 .blogContainer {
   width: 100%;
   background-color: rgba($color: #000000, $alpha: 0.9);
-  height: 200px;
-  position: relative;
-  .mask {
+  padding-top: 10rem;
+  .blogContainer__inner {
+    max-width: 1440px;
+    
+    
     height: 200px;
-    &__img {
-      width: 100%;
+    position: relative;
+    .mask {
       height: 200px;
-      object-fit: cover;
-      background-size: cover;
-      background-position: top;
+      &__img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-size: cover;
+        background-position: top;
+      }
+  
+      &::after {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 50;
+        left: 0;
+        content: "";
+        background-color: #000;
+        opacity: 0.4;
+      }
     }
-
-    &::after {
-      width: 100%;
+  
+    .blog {
+      max-width: 1440px;
+      margin: 0 auto;
       height: 200px;
       position: absolute;
-      top: 50;
-      left: 0;
-      content: "";
-      background-color: #000;
-      opacity: 0.4;
-    }
-  }
-
-  .blog {
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 200px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 60%;
-    left: 50%;
-
-    h1 {
-      font-size: 9.6rem;
-      font-weight: 500;
-      color: $light-text;
+      transform: translate(-50%, -50%);
+      top: 60%;
+      left: 50%;
+  
+      h1 {
+        font-size: 9.6rem;
+        font-weight: 500;
+        color: $light-text;
+      }
     }
   }
 }
+

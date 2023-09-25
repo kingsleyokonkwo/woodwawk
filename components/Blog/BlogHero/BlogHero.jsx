@@ -1,9 +1,10 @@
-import Image from 'next/image'
-import styles from './BlogHero.module.scss'
+import Image from "next/image";
+import styles from "./BlogHero.module.scss";
 
 const Blog = () => {
   return (
     <div className={styles.blogContainer}>
+      <div className={styles.blogContainer__inner}>
         <div className={styles.mask}>
           <Image
             src="/assets/hero.png"
@@ -14,10 +15,11 @@ const Blog = () => {
           />
         </div>
         <div className={styles.blog}>
-            <h1>Blog</h1>
+          <h1>Blog</h1>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

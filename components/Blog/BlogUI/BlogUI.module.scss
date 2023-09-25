@@ -1,8 +1,13 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
 
 .blogContainer {
     width: 100%;
     background-color: $main-bg;
+
+    @include md {
+        display: none;
+    }
 
     .blogUI {
         max-width: 1440px;
@@ -11,5 +16,17 @@
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 2.4rem;
+
+        @include md {
+            padding: 6rem 7.5rem;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.mobileBlog {
+    display: none;
+    @include md {
+        display: initial;
     }
 }

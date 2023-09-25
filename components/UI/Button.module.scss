@@ -1,3 +1,4 @@
+@import '../../styles/responsive.scss';
 @import "../../styles/variables.scss";
 
 .button,
@@ -21,6 +22,10 @@
   font-size: 1.6rem;
   font-weight: 700;
   transition: all .2s ease-in-out;
+  @include md {
+    width: 34rem;
+    padding: 2rem 0;
+  }
 
   &:hover {
     transform: scaleX(1.01);

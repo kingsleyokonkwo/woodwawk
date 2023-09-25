@@ -1,60 +1,88 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .advertContainer {
-    width: 100%;
-    background-color: $main-bg;
-    padding-bottom: 11rem;
+  width: 100%;
+  background-color: $main-bg;
+  padding-bottom: 11rem;
 
-    .advert, .advert__reverse {
-        max-width: 1440px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 7.9rem;
-        padding: 0 11.4rem;
+  .advert,
+  .advert__reverse {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 7.9rem;
+    padding: 0 11.4rem;
 
-        &__image {
-            position: relative;
-
-            .background {
-                height: 50rem;
-                width: 53.9rem;
-                background-color: $soft-bg;
-                margin-left: 4.9rem;
-                
-            }
-
-            .image {
-                width: 95%;
-                height: 92%;
-                position: absolute;
-                top: 1.9rem;
-                right: 2.2rem;
-                
-            }
-
-        }
-
-        &__text {
-            h3 {
-                font-size: 4.8rem;
-                font-weight: 500;
-                margin-bottom: 2.4rem;
-                line-height: 1.1;
-            }
-
-            p {
-                font-size: 2.2rem;
-                font-weight: 400;
-                line-height: 1.6;
-            }
-
-        }
+    @include md {
+      flex-direction: column;
+      padding: 0 7rem;
+      gap: 5rem;
     }
 
-    .advert__reverse {
-        flex-direction: row-reverse;
+    &__image {
+      position: relative;
+
+      .background {
+        height: 50rem;
+        width: 53.9rem;
+        background-color: $soft-bg;
+        margin-left: 4.9rem;
+
+        @include xxl {
+          height: 40rem;
+          width: 43.9rem;
+          margin-left: 3.5rem;
+        }
+
+        @include md {
+          width: 56rem;
+        }
+      }
+
+      .image {
+        width: 95%;
+        height: 92%;
+        position: absolute;
+        top: 1.9rem;
+        right: 2.2rem;
+
+        @include md {
+          width: 100%;
+        }
+      }
     }
 
+    &__text {
+      h3 {
+        font-size: 4.8rem;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+        line-height: 1.1;
+        @include xxl {
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+        }
+      }
 
+      p {
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 1.6;
+
+        @include xxl {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .advert__reverse {
+    flex-direction: row-reverse;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
 }
