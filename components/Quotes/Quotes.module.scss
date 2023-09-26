@@ -16,8 +16,17 @@
     padding: 5rem 10rem;
   }
 
+  @include lg {
+    padding: 5rem;
+  }
+
   @include md {
     padding: 4rem;
+  }
+
+  @include sm {
+    padding: 2.4rem;
+    width: 88%;
   }
 
   h3 {
@@ -25,6 +34,10 @@
     font-weight: 500;
     margin-bottom: 1.6rem;
     color: $light-text;
+
+    @include lg {
+      font-size: 2.5rem;
+    }
   }
 
   p {
@@ -33,6 +46,10 @@
     margin-bottom: 1.6rem;
     color: $light-text;
     line-height: 1.7;
+
+    @include lg {
+      font-size: 1.5rem;
+    }
   }
 
   .design {
@@ -43,7 +60,7 @@
     top: 20rem;
     transform: translate(-50%, -50%);
 
-    @include md {
+    @include lg {
       display: none;
     }
   }
@@ -58,10 +75,6 @@
     border-radius: 0rem 0rem 0rem 3.2rem;
 
     @include xxl {
-      top: 31.35rem;
-    }
-
-    @include md {
       display: none;
     }
   }
@@ -77,6 +90,10 @@
       top: 20rem;
       transform: translate(-50%, -50%);
     }
+
+    @include sm {
+      left: 2.41rem;
+    }
   }
 
   .design3 {
@@ -89,6 +106,12 @@
       right: -2rem;
       top: 20rem;
       transform: translate(-50%, -50%);
+    }
+
+    @include sm {
+      right: -1.8rem;
+      top: 20rem;
+      width: 3.5rem;
     }
   }
 }

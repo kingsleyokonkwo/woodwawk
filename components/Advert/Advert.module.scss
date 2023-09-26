@@ -8,6 +8,7 @@
 
   .advert,
   .advert__reverse {
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -15,10 +16,21 @@
     gap: 7.9rem;
     padding: 0 11.4rem;
 
+    @include lg {
+      padding: 0 4rem;
+      gap: 5rem;
+    }
+
     @include md {
       flex-direction: column;
       padding: 0 7rem;
-      gap: 5rem;
+      
+    }
+
+// i made a correction here, check!
+
+    @include sm {
+      padding: 0 2.4rem;
     }
 
     &__image {
@@ -39,6 +51,18 @@
         @include md {
           width: 56rem;
         }
+
+        @include sm {
+          width: 30rem;
+          height: 29rem;
+        }
+
+        @include ssm {
+          width: 27rem;
+          height: 25rem;
+          margin: 0 auto;
+          margin-left: 3.6rem;
+        }
       }
 
       .image {
@@ -50,6 +74,16 @@
 
         @include md {
           width: 100%;
+        }
+
+        @include sm {
+          top: 1.2rem;
+        right: 1rem;
+        }
+
+        
+        @include ssm {
+          width: 94%;
         }
       }
     }
@@ -64,6 +98,14 @@
           font-size: 3rem;
           margin-bottom: 1.5rem;
         }
+
+        @include sm {
+          font-size: 3.4rem;
+        }
+
+        @include ssm {
+          font-size: 2.5rem;
+        }
       }
 
       p {
@@ -73,6 +115,10 @@
 
         @include xxl {
           font-size: 1.8rem;
+        }
+
+        @include ssm {
+          z-index: 1.5rem;
         }
       }
     }

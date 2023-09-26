@@ -10,12 +10,21 @@
       padding: 2rem;
     }
 
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+
     .blogpost {
     &__image {
       position: relative;
       height: 28rem;
       width: 36rem;
       margin-bottom: 2.4rem;
+
+      @include sm {
+        margin: auto;
+        margin-bottom: 4rem;
+      }
 
       @include xxl {
         width: 33rem;
@@ -30,6 +39,15 @@
         @include xxl {
           width: 30rem;
         }
+
+        @include sm {
+          width: 29rem;
+        }
+
+        @include ssm {
+          margin-left: auto;
+          width: 30rem;
+        }
       }
 
       .blogpost__img {
@@ -38,6 +56,16 @@
         position: absolute;
         top: 0.9rem;
         right: 0;
+
+        @include sm {
+          width: 97%;
+          right: .7rem;
+        }
+
+        @include ssm {
+          width: 98%;
+          right: .7rem;
+        }
       }
     }
 
@@ -45,17 +73,29 @@
       font-size: 1.8rem;
       font-weight: 400;
       margin-bottom: 0.4rem;
+
+      @include sm {
+        font-size: 1.5rem;
+      }
     }
 
     &__header {
       font-size: 2.4rem;
       font-weight: 500;
       margin-bottom: 0.4rem;
+
+      @include sm {
+        font-size: 2.2rem;
+      }
     }
 
     &__desc {
       font-size: 2rem;
       font-weight: 400;
+
+      @include sm {
+        font-size: 1.8rem;
+      }
     }
   }
 }

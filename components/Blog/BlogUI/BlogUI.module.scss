@@ -17,6 +17,10 @@
         grid-template-columns: 1fr 2fr;
         gap: 2.4rem;
 
+        @include lg {
+            padding: 6rem 4rem;
+        }
+
         @include md {
             padding: 6rem 7.5rem;
             grid-template-columns: 1fr;
