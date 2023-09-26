@@ -6,8 +6,16 @@
   background-color: rgba($color: #000000, $alpha: 0.9);
   margin-top: 9rem;
 
+  @include lg {
+    margin-top: 9rem;
+  }
+
+  @include md {
+    margin-top: 4rem;
+  }
+
   @include sm {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .blogContainer__inner {

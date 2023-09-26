@@ -21,13 +21,13 @@ const Quotes = () => {
         height={10000}
         className={styles.design}
       />
-      <Image
+      {/* <Image
         src="/assets/design-2.png"
         alt="design"
         width={10000}
         height={10000}
         className={styles.design1}
-      />
+      /> */}
       <Image
         src="/assets/design-3.png"
         alt="design"

@@ -1,19 +1,37 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { navLink } from "@/Data";
 
 const Navbar = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [show, setShow] = useState(true);
 
-    const handleClick = () => {
-        setClick(!click)
-    }
+  const handleScroll = () => {
+    setScrollPos(document.body.getBoundingClientRect().top);
+    setShow(document.body.getBoundingClientRect().top > scrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  const handleClick = () => {
+    setClick(!click);
+  };
+
+  const pathname = usePathname();
 
   return (
-    <div className={styles.header}>
+    <div
+      className={`${styles.header} ${
+        show ? `${styles.visible}` : `${styles.hidden}`
+      }`}
+    >
       <div className={styles.nav}>
         <Link href="/" className={styles.logoContainer}>
           <Image
@@ -24,27 +42,21 @@ const Navbar = () => {
             className={styles.logo}
           />
         </Link>
-        <ul className={`${styles.navigations} ${click ? `${styles.active}` : ""}`}>
-          <li>
-            <Link href="/">Home</Link>
-            <hr />
-          </li>
-          <li>
-            <Link href="/">Products</Link>
-            {/* <hr /> */}
-          </li>
-          <li>
-            <Link href="/">About Us</Link>
-            {/* <hr /> */}
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-            {/* <hr /> */}
-          </li>
-          <li>
-            <Link href="/">Contact Us</Link>
-            {/* <hr /> */}
-          </li>
+        <ul
+          className={`${styles.navigations} ${click ? `${styles.active}` : ""}`}
+        >
+          {navLink.map(({ link, name }) => (
+            <li key={name} className={styles.links}>
+              <Link
+                href={link}
+                className={`${styles.link} ${
+                  pathname == link ? `${styles.on}` : ""
+                }`}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         <div className={styles.hamburger} onClick={handleClick}>

@@ -1,5 +1,5 @@
 @import "../../styles/variables.scss";
-@import '../../styles/responsive.scss';
+@import "../../styles/responsive.scss";
 
 .reviewContainer {
   width: 100%;
@@ -15,6 +15,10 @@
       padding: 0 9rem;
     }
 
+    @include sm {
+      padding: 0 3rem;
+    }
+
     .review__header {
       font-weight: 500;
       font-size: 4.8rem;
@@ -23,26 +27,52 @@
       text-align: center;
     }
 
-    .reviews {
+    .carouselWrapper {
       position: relative;
-      display: flex;
-      gap: 2.4rem;
+      z-index: 0;
+    }
+    .reviews {
+      position: unset;
 
       .review {
         border: 2px solid $soft-bg;
         padding: 2.4rem;
         text-align: center;
 
+        &:not(:nth-last-child(0)) {
+          margin-right: 2rem;
+
+          @include sm {
+            margin-right: 0;
+          }
+        }
+
         .header {
           margin-bottom: 0.8rem;
           font-size: 2.4rem;
           font-weight: 500;
+
+          @include sm {
+            font-size: 2rem;
+          }
+
+          @include ssm {
+            font-size: 1.5rem;
+          }
         }
 
         .text {
           margin-bottom: 0.8rem;
           font-size: 1.8rem;
           font-weight: 400;
+
+          @include sm {
+            font-size: 1.5rem;
+          }
+
+          @include sm {
+            font-size: 1.2rem;
+          }
         }
 
         .stars {

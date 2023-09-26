@@ -99,13 +99,14 @@
         li {
           display: flex;
           width: fit-content;
-          hr {
-            margin-top: 0.5rem;
-            height: 2px;
-            border: none;
-            outline: none;
-            border-radius: 1rem;
-            background-color: $dark-bg;
+
+          .link {
+            text-transform: capitalize;
+            padding: 0.5rem 0;
+
+            &.on {
+              border-bottom: 3px solid $dark-bg;
+            }
           }
         }
       }

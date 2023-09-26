@@ -31,7 +31,7 @@ export default function Home() {
             Consequat turpis quam pulvinar eu nunc dictum vitae nec."
         styles="advert__reverse"
       />
-      {/* <Reviews /> */}
+      <Reviews />
       <Quotes />
     </main>
   );

@@ -8,6 +8,17 @@
   top: 0;
   z-index: 1000;
 
+  &.visible {
+    visibility: visible;
+    transition: all .3s;
+  }
+
+  &.hidden {
+    visibility: hidden;
+    transition: all .5s;
+    transform: translateY(-100%);
+  }
+
   .nav {
     max-width: 1440px;
     margin: 0 auto;
@@ -15,23 +26,24 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.2rem 11.4rem 0.2rem 9rem;
+    z-index: 1000;
 
     @include lg {
-      padding: .2rem 6.5rem .2rem 3rem;
+      padding: 0.2rem 6.5rem 0.2rem 3rem;
     }
 
     @include sm {
-      padding: .1rem 2.4rem .1rem 1rem;
+      padding: 0.1rem 2.4rem 0.1rem 1rem;
     }
 
     @include ssm {
-      padding: .1rem 2rem .1rem 1rem;
+      padding: 0.1rem 2rem 0.1rem 1rem;
     }
 
     .hamburger {
       display: none;
       position: relative;
-      z-index: 1000;
+      z-index: 10000;
       @include md {
         display: initial;
       }
@@ -88,7 +100,6 @@
         z-index: 10;
         transition: 0.3s;
         padding: 6.4rem 0rem;
-
       }
 
       &.active {
@@ -97,15 +108,24 @@
         }
       }
 
-      li {
-        hr {
-          margin-top: 0.5rem;
-          height: 2px;
-          border: none;
-          outline: none;
-          border-radius: 1rem;
-          background-color: $dark-bg;
+      .links {
+        .link {
+          text-transform: capitalize;
+          padding: 0.5rem 0;
+
+          &.on {
+            border-bottom: 3px solid $dark-bg;
+          }
         }
+
+        // hr {
+        //   margin-top: 0.5rem;
+        //   height: 2px;
+        //   border: none;
+        //   outline: none;
+        //   border-radius: 1rem;
+        //   background-color: $dark-bg;
+        // }
       }
     }
   }

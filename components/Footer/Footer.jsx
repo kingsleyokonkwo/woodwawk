@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import Button from "../UI/Button";
+import { footerLink } from "@/Data";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footer}>
@@ -22,30 +26,18 @@ const Footer = () => {
             </p>
           </div>
           <ul className={styles.links}>
-            <li>
-              <Link href="/">Home</Link>
-              <hr />
-            </li>
-            <li>
-              <Link href="/">About Us</Link>
-              {/* <hr /> */}
-            </li>
-            <li>
-              <Link href="/">Contact Us</Link>
-              {/* <hr /> */}
-            </li>
-            <li>
-              <Link href="/">Products</Link>
-              {/* <hr /> */}
-            </li>
-            <li>
-              <Link href="/">Blog</Link>
-              {/* <hr /> */}
-            </li>
-            <li>
-              <Link href="/">Privacy Policy</Link>
-              {/* <hr /> */}
-            </li>
+            {footerLink.map(({ name, link }) => (
+              <li key={name}>
+                <Link
+                  href={link}
+                  className={`${styles.link} ${
+                    pathname == link ? `${styles.on}` : ""
+                  }`}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className={styles.advert}>
             <h3 className={styles.advert__header}>Lorem ipsum dolor sit</h3>

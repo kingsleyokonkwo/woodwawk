@@ -1,3 +1,20 @@
+export const navLink = [
+  {name: "home", link: "/"},
+  {name: "products", link: "/products"},
+  {name: "about us", link: "/about"},
+  {name: "blog", link: "/blog"},
+  {name: "contact us", link: "/contact"},
+]
+
+export const footerLink = [
+  {name: "home", link: "/"},
+  {name: "about us", link: "/about"},
+  {name: "contact us", link: "/contact"},
+  {name: "products", link: "/products"},
+  {name: "blog", link: "/blog"},
+  {name: "privacy policy", link: "/privacy"},
+]
+
 export const products = [
   {
     id: 1,
@@ -34,6 +51,20 @@ export const reviews = [
     text: " Lorem ipsum dolor sit amet consectetur. Egestas tincidunt arculacus sit accumsan. Viverra amet consequat tellus risus integer.",
     img: "/assets/star.png"
   },
+  {
+    id: 3,
+    title: "Lorem Ipsum",
+    text: " Lorem ipsum dolor sit amet consectetur. Egestas tincidunt arculacus sit accumsan. Viverra amet consequat tellus risus integer.",
+    img: "/assets/star.png"
+  },
+
+  {
+    id: 3,
+    title: "Lorem Ipsum",
+    text: " Lorem ipsum dolor sit amet consectetur. Egestas tincidunt arculacus sit accumsan. Viverra amet consequat tellus risus integer.",
+    img: "/assets/star.png"
+  },
+
   {
     id: 3,
     title: "Lorem Ipsum",
