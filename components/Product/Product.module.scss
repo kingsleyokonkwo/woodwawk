@@ -9,7 +9,11 @@
   position: relative;
 
   @include md {
-    padding-top: 3.5rem;
+    padding-top: 15rem;
+  }
+
+  @include ssm {
+    padding-top: 10rem;
   }
 
   &Inner {
