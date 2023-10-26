@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     setScrollPos(document.body.getBoundingClientRect().top);
+    console.log(document.body.getBoundingClientRect())
     setShow(document.body.getBoundingClientRect().top > scrollPos);
   };
 
