@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const handleScroll = () => {
     setScrollPos(document.body.getBoundingClientRect().top);
-    console.log(document.body.getBoundingClientRect())
     setShow(document.body.getBoundingClientRect().top > scrollPos);
   };
 
@@ -26,6 +25,10 @@ const Navbar = () => {
   };
 
   const pathname = usePathname();
+
+  const handleStyle = () => {
+    setClick(false);
+  };
 
   return (
     <div
@@ -53,6 +56,7 @@ const Navbar = () => {
                 className={`${styles.link} ${
                   pathname == link ? `${styles.on}` : ""
                 }`}
+                onClick={handleStyle}
               >
                 {name}
               </Link>
